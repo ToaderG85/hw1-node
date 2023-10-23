@@ -25,9 +25,11 @@ async function invokeAction({ action, id, name, email, phone}) {
       break;
     case "add":
       await addContact(name, email, phone);
+      console.log("Contactul a fost adaugat cu succes.");
       break;
     case "remove":
       await removeContact(id);
+      console.log("Contactul a fost sters.");
     break;
     default:
         console.warn("\x1B[31m Unknown action type!");
